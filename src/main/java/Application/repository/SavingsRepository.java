@@ -10,6 +10,6 @@ import Application.entity.Savings;
 @Repository
 public interface SavingsRepository extends JpaRepository<Savings, Integer> {
 
-  @Query(value = "SELECT * FROM Savings WHERE MONTH(account_date) =  ?1 AND YEAR(account_date) = ?2", nativeQuery = true)
+  @Query(value = "SELECT * FROM Savings WHERE EXTRACT(MONTH FROM account_date) =  ?1 AND EXTRACT(YEAR FROM account_date) = ?2", nativeQuery = true)
   List<Savings> findSavingsByMonth(int Month, int year);
 }

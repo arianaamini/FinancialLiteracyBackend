@@ -103,55 +103,55 @@ public class BalanceController {
       if (isAdmin)
         incomeRepository.save(Income.builder().name(name).estimate(estimate).actual(actual).accountDate(date).build());
       else
-        incomeRepository.save(Income.builder().name(name).estimate(estimate).accountDate(date).build());
+        incomeRepository.save(Income.builder().name(name).actual(estimate).accountDate(date).build());
       return new ResponseEntity<>(HttpStatus.CREATED);
     case "debt":
       if (isAdmin)
         debtRepository.save(Debt.builder().name(name).estimate(estimate).actual(actual).accountDate(date).build());
       else
-        debtRepository.save(Debt.builder().name(name).estimate(estimate).accountDate(date).build());
+        debtRepository.save(Debt.builder().name(name).actual(estimate).accountDate(date).build());
       return new ResponseEntity<>(HttpStatus.CREATED);
     case "health":
       if (isAdmin)
         healthRepository.save(Health.builder().name(name).estimate(estimate).actual(actual).accountDate(date).build());
       else
-        healthRepository.save(Health.builder().name(name).estimate(estimate).accountDate(date).build());
+        healthRepository.save(Health.builder().name(name).actual(estimate).accountDate(date).build());
       return new ResponseEntity<>(HttpStatus.CREATED);
     case "housing":
       if (isAdmin)
         housingRepository.save(Housing.builder().name(name).estimate(estimate).actual(actual).accountDate(date).build());
       else
-        housingRepository.save(Housing.builder().name(name).estimate(estimate).accountDate(date).build());
+        housingRepository.save(Housing.builder().name(name).actual(estimate).accountDate(date).build());
       return new ResponseEntity<>(HttpStatus.CREATED);
     case "insurance":
       if (isAdmin)
         insuranceRepository.save(Insurance.builder().name(name).estimate(estimate).actual(actual).accountDate(date).build());
       else
-        insuranceRepository.save(Insurance.builder().name(name).estimate(estimate).accountDate(date).build());
+        insuranceRepository.save(Insurance.builder().name(name).actual(estimate).accountDate(date).build());
       return new ResponseEntity<>(HttpStatus.CREATED);
     case "personal":
       if (isAdmin)
         personalRepository.save(Personal.builder().name(name).estimate(estimate).actual(actual).accountDate(date).build());
       else
-        personalRepository.save(Personal.builder().name(name).estimate(estimate).accountDate(date).build());
+        personalRepository.save(Personal.builder().name(name).actual(estimate).accountDate(date).build());
       return new ResponseEntity<>(HttpStatus.CREATED);
     case "savings":
       if (isAdmin)
         savingsRepository.save(Savings.builder().name(name).estimate(estimate).actual(actual).accountDate(date).build());
       else
-        savingsRepository.save(Savings.builder().name(name).estimate(estimate).accountDate(date).build());
+        savingsRepository.save(Savings.builder().name(name).actual(estimate).accountDate(date).build());
       return new ResponseEntity<>(HttpStatus.CREATED);
     case "transportation":
       if (isAdmin)
         transportationRepository.save(Transportation.builder().name(name).estimate(estimate).actual(actual).accountDate(date).build());
       else
-        transportationRepository.save(Transportation.builder().name(name).estimate(estimate).accountDate(date).build());
+        transportationRepository.save(Transportation.builder().name(name).actual(estimate).accountDate(date).build());
       return new ResponseEntity<>(HttpStatus.CREATED);
     case "utilities":
       if (isAdmin)
         utilitiesRepository.save(Utilities.builder().name(name).estimate(estimate).actual(actual).accountDate(date).build());
       else
-        utilitiesRepository.save(Utilities.builder().name(name).estimate(estimate).accountDate(date).build());
+        utilitiesRepository.save(Utilities.builder().name(name).actual(estimate).accountDate(date).build());
       return new ResponseEntity<>(HttpStatus.CREATED);
     }
     return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
